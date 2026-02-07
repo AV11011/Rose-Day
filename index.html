@@ -35,7 +35,7 @@ body{
 .roses span{
   position:fixed;
   font-size:18px;
-  opacity:.22;
+  opacity:.35;
   animation:float linear infinite;
   pointer-events:none;
 }
@@ -144,12 +144,13 @@ button{
 
 /* FLOATING ROSES */
 const roses=document.getElementById("roses");
-for(let i=0;i<35;i++){
+for(let i=0;i<70;i++){
   const r=document.createElement("span");
   r.textContent="🌹";
   r.style.left=Math.random()*100+"vw";
-  r.style.animationDuration=14+Math.random()*18+"s";
-  r.style.fontSize=14+Math.random()*20+"px";
+  r.style.top=Math.random()*100+"vh";   // 👈 start across screen
+  r.style.animationDuration=12+Math.random()*14+"s";
+  r.style.fontSize=16+Math.random()*24+"px";
   roses.appendChild(r);
 }
 
@@ -228,3 +229,4 @@ btn.onclick=()=>{
 
 </body>
 </html>
+
